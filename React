@@ -1,0 +1,150 @@
+import React from "react";
+export default function Eventdemo(props) {
+    // normal javacript function
+    // function callon() {
+    //     alert("this is alert event")
+    // }
+
+    // arrow function
+    const callon = () => {
+        alert("this is second method")
+    }
+    return <>
+        <h1 class="text">{props.value}event</h1>
+        <button onClick={callon} class="btn btn-success">Click me</button>
+    </>;
+};
+import React from "react";
+export default function Firstname() {
+    const firstname = () => {
+        alert("Firstname")
+    }
+    return <>
+        <h1>Fname</h1>
+        <button onClick={firstname}>Fisrtname</button>
+    </>
+}
+import React, { useState } from "react";
+export default function Increment() {
+    // let val = 0;
+    const [val, setval] = useState(0);
+    console.log(useState());
+    const increment = () => {
+        setval(val + 1)
+    }
+    return <>
+        <h1>{val}</h1>
+        <button className="btn btn-primary" onClick={increment}>increment</button>
+    </>
+}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import Eventdemo from './eventdemo';
+import Increment from './increment';
+import Decrement from './decrement';
+import Lastname from './lastname';
+import Firstname from './firstname';
+import Double from './double';
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+
+  <>
+    <Eventdemo value="yuvraj singh" />
+    <Eventdemo />
+    <Increment />
+    <Decrement />
+    <Firstname />
+    <Lastname />
+    <Double />
+  </>
+);
+
+import React from "react";
+export default function Lastname() {
+    // const name = document.getElementsByClassName("name").text;
+    const lastname = () => {
+        alert("Lastname")
+
+    }
+    return <>
+        <div>
+            <h1 class="name">Lname</h1>
+            <input type="button" value="lastname" onClick={lastname}></input>
+            {/* <button onClick={lastname}> lastname</button> */}
+        </div>
+    </>
+}
+import React, { useState } from "react";
+export default function Decrement() {
+    const [vad, setvad] = useState(50);
+    console.log(useState());
+    const decrement = () => {
+        setvad(vad - 1)
+    }
+
+    return <>
+        <h1>{vad}</h1>
+        <button class="btn btn-primary" onClick={decrement}>decrement</button>
+    </>
+}
+ h1 {
+     font-size: 35px;
+ }
+
+ .incre {
+     background-color: blueviolet;
+     font-size: 30px;
+     /* flex: 2; */
+     height: 100px;
+     width: 200px;
+ }
+
+ .decre {
+     background-color: brown;
+     font-size: 30px;
+     height: 100px;
+     width: 200px;
+     /* flex: 3; */
+ }
+
+ .flex {
+     display: flex;
+     /* justify-content: flex-end; */
+     gap: 30px;
+
+ }
+
+ .siz {
+     height: 100px;
+     width: 100%;
+     text-align: center;
+     background-color: aqua;
+ }
+import React, { useState } from "react";
+import './double.css'
+export default function Double() {
+    const [vat, setvat] = useState(0)
+    console.log(useState());
+
+    const Doubleon = () => {
+        setvat(vat + 1)
+    }
+    const Doubleoff = () => {
+        if (vat > 0) {
+            setvat(vat - 1)
+        }
+        else {
+            alert("zero limit")
+            setvat(0)
+        }
+    }
+    return <>
+        <h1 class="siz">{vat}</h1>
+        <div class="flex">
+            <button onClick={Doubleon} class="incre">+</button>
+            <button onClick={Doubleoff} class="decre">-</button>
+        </div>
+    </>
+}
