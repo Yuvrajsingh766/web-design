@@ -1,0 +1,33 @@
+ h1 {
+     font-size: 35px;
+ }
+
+ .incre {
+     background-color: blueviolet;
+     font-size: 30px;
+     /* flex: 2; */
+     height: 100px;
+     width: 200px;
+ }
+
+ .decre {
+     background-color: brown;
+     font-size: 30px;
+     height: 100px;
+     width: 200px;
+     /* flex: 3; */
+ }
+
+ .flex {
+     display: flex;
+     /* justify-content: flex-end; */
+     gap: 30px;
+
+ }
+
+ .siz {
+     height: 100px;
+     width: 100%;
+     text-align: center;
+     background-color: aqua;
+ }
