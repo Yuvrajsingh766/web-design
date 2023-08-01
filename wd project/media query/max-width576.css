@@ -1,0 +1,43 @@
+@media(max-width:576px) {
+
+    /* ====================== header ===================== */
+
+    .container {
+        margin-right: 24px;
+        margin-left: 24px;
+    }
+
+}
+
+.header .wild .navbar ul {
+    display: none;
+    align-items: center;
+    gap: 39px;
+}
+
+.header .wild .them .bar {
+    display: block;
+}
+
+/* ========================= heros ============================== */
+
+.heros {
+    padding: 153px 10px;
+}
+
+.container {
+    margin-right: 43px;
+    margin-left: 12px;
+}
+
+.heros .protect {
+    width: 110%;
+}
+
+.heros .protect h1 {
+    font-size: 40px;
+}
+
+.heros .protect p {
+    font-size: 18px;
+}

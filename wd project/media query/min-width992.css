@@ -1,0 +1,57 @@
+@media (min-width:992px) {
+    /* ====================== header ===================== */
+
+    .container {
+        margin-right: 46px;
+        margin-left: 16px;
+    }
+
+    /* ====================== header ===================== */
+
+    .header .wild .logo h1 {
+        font-size: 33px;
+    }
+
+    .header .wild .them {
+        font-size: 22px;
+    }
+
+    .header .wild .them .bar {
+        height: 36px;
+        width: 40px;
+        height: 36px;
+        width: 40px;
+    }
+
+    .header .wild .navbar ul {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+    }
+
+    .header .wild .them .bar {
+        display: none;
+    }
+
+
+    /* ========================= heros ============================== */
+
+    .heros {
+        padding: 221px 10px;
+    }
+
+
+
+    .heros .protect {
+        width: 63%;
+    }
+
+    .heros .protect h1 {
+        font-size: 44px;
+    }
+
+    .heros .protect p {
+        font-size: 18px;
+    }
+
+}

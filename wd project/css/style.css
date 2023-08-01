@@ -1,0 +1,996 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.container-md {
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.container {
+    margin-right: 70px;
+    margin-left: 70px;
+}
+
+/* ======================== header =================================== */
+.header {
+    /* background-color: aqua; */
+    background-color: #b0c4de8c;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    /* top: 0; */
+    width: 100%;
+
+    padding: 12px;
+    z-index: 11111;
+    margin: 16px 0px;
+}
+
+.header .wild {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .wild .logo {
+    flex: 1;
+}
+
+.header .wild .logo h1 {
+    font-size: 38px;
+    text-transform: capitalize;
+    color: white;
+}
+
+.header .wild .logo h1 span {
+    color: #F42A2A;
+}
+
+.header .wild .navbar {
+    flex: 2;
+}
+
+.header .wild .navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 39px;
+}
+
+.header .wild .navbar ul .fons {
+    font-size: 25px;
+    position: relative;
+}
+
+
+.header .wild .navbar ul .fonss .fos-size {
+    border: none;
+    display: inline-block;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    background: #00000057;
+
+    font-size: 20px;
+    text-align: center;
+    /* line-height: 42px; */
+    padding: 9px;
+    border-radius: 50%;
+    transition: 1s all ease;
+}
+
+.header .wild .navbar ul .fonss .fos-size:hover {
+    background-color: red;
+}
+
+.header .wild .navbar ul .fonss .fos-size a span {
+    color: white;
+}
+
+.header .wild .navbar ul .fons::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0%;
+    border: none;
+    background-color: black;
+    /* top: 0; */
+    bottom: -5px;
+    left: 0;
+    transition: 1s all ease;
+    /* right: 0; */
+}
+
+.header .wild .navbar ul .fons:hover::after {
+    width: 100%;
+}
+
+
+.header .wild .navbar ul .fons a {
+    color: white;
+}
+
+.header .wild .navbar ul .fons a:hover {
+    color: red;
+}
+
+/* .header .wild .navbar .drow-pages ul {
+    fle;
+} */
+.header .navbar .drop-down {
+    /* flex-direction: column; */
+    position: relative;
+}
+
+.header .navbar .drop-down .show-page {
+    flex-direction: column;
+    display: none;
+    gap: 25px;
+    position: absolute;
+    top: 35px;
+    width: 150px;
+    left: -32px;
+    height: auto;
+    background: black;
+    color: white;
+    z-index: 111111;
+}
+
+.header .navbar .drop-down .show-page li {
+    padding: 8px;
+}
+
+.header .navbar .drop-down:hover .show-page {
+    display: block;
+}
+
+.header .navbar .drop-down span {
+    transition: 1s all ease;
+}
+
+.header .navbar .drop-down:hover span {
+    transform: rotate(180deg);
+}
+
+.header .wild .them {
+    flex: 0.2;
+    font-size: 25px;
+    display: flex;
+    gap: 15px;
+    color: white;
+    align-items: center;
+}
+
+.header .wild .them .bar {
+    color: white;
+    background: red;
+    height: 35px;
+    width: 45px;
+    text-align: center;
+    border: 12px;
+    display: none;
+    border-radius: 10px;
+    padding: 0px;
+}
+
+/* ================================= hero ======================== */
+.heros {
+    background-image: url(../images/bg1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 200px 0px;
+    position: relative;
+    z-index: 1111;
+}
+
+.heros::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.658);
+    opacity: 1;
+    z-index: -1;
+}
+
+.heros .protect {
+    width: 53%;
+}
+
+.heros .protect h1 {
+    font-size: 45px;
+    color: white;
+    text-transform: inherit;
+    padding-bottom: 18px;
+}
+
+.heros .protect p {
+    font-size: 20px;
+    color: #f3f3f3;
+    border-left: 4px solid white;
+    padding: 0px 8px;
+}
+
+.heros .protect .btn {
+    display: flex;
+    gap: 20px;
+    padding-top: 19px;
+    cursor: pointer;
+}
+
+.heros .protect .btn1 {
+    height: 51px;
+    width: 190px;
+    text-transform: capitalize;
+    font-size: 20px;
+    border-radius: 13px;
+    text-align: center;
+    border: none;
+    background-color: white;
+    transition: 1s all ease;
+}
+
+.heros .protect .btn1:hover {
+    background-color: #F42A2A;
+    color: white;
+
+}
+
+.heros .protect .btn2 {
+    height: 51px;
+    width: 190px;
+    text-transform: capitalize;
+    font-size: 20px;
+    border-radius: 13px;
+    border: 1px solid white;
+    background-color: transparent;
+    text-align: center;
+    transition: 1s all ease;
+}
+
+.heros .protect .btn2:hover {
+    background-color: white;
+    color: black;
+}
+
+/* =====================protect ===================== */
+.protects {
+    background-color: whitesmoke;
+    padding: 170px 0px;
+    position: relative;
+}
+
+.protects .protect-flex {
+    display: flex;
+    gap: 28px;
+    position: absolute;
+    top: -34px;
+    z-index: 11111;
+
+}
+
+.protects .qualified {
+    background-color: white;
+    border-radius: 36px;
+    padding: 20px;
+    height: 304px;
+    width: 391px;
+    transition: 1s all ease;
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.197);
+
+
+}
+
+.protects .qualified:hover .qualified-grid .icons {
+    background-color: red;
+}
+
+.protects .qualified:hover .qualified-grid .icons span {
+    color: white;
+}
+
+
+
+
+
+.protects .qualified .qualified-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 49px;
+    align-items: center;
+
+}
+
+.protects .qualified .qualified-grid .icons {
+    background: rgba(173, 216, 230, 0.351);
+    height: 75px;
+    width: 75px;
+    line-height: 79px;
+    text-align: center;
+    border-radius: 12px;
+    /* transition: 1s all ease; */
+}
+
+/* .protects .qualified .qualified-grid .icons:hover {
+    background-color: red;
+
+} */
+
+.protects .qualified .qualified-grid .icons span {
+    /* transition: 1s all ease; */
+    font-size: 25px;
+    color: red;
+}
+
+/* .protects .qualified .qualified-grid .icons span:hover {
+    color: white;
+} */
+
+
+/* .protects .qualified.texts {} */
+
+
+.protects .qualified .qualified-grid .texts p {
+    font-size: 20px;
+    color: grey;
+    padding-bottom: 2px;
+
+}
+
+
+.protects .qualified .qualified-grid .texts h3 {
+    font-size: 32px;
+    width: 228px;
+    height: 76px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.protects .qualified .qualified-grid .texts h3:hover {
+    color: red;
+}
+
+
+.protects .qualified p {
+    padding-top: 20px;
+    font-size: 20px;
+    color: grey;
+}
+
+/* ================save as============================--> */
+.save-as {
+    padding: 20px;
+}
+
+.save-as .save-flex {
+    display: flex;
+    gap: 35px;
+}
+
+.save-as .save-flex .left-text {
+    flex: 1;
+}
+
+.save-as .save-flex .left-text h6 {
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    /* padding-bottom: 10px; */
+}
+
+.save-as .save-flex .left-text h2 {
+    font-size: 31px;
+    font-weight: bold;
+    text-transform: capitalize;
+    line-height: 44px;
+    padding-bottom: 18px;
+}
+
+.save-as .save-flex .left-text p {
+    font-size: 16px;
+    word-spacing: 3px;
+    line-height: 28px;
+    color: grey;
+    padding-bottom: 20px;
+}
+
+.save-as .save-flex .left-text button {
+    height: 49px;
+    width: 163px;
+    text-transform: capitalize;
+    font-size: 23px;
+    padding-top: -1px;
+    background: red;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    transition: 1s all linear;
+    cursor: pointer;
+}
+
+.save-as .save-flex .left-text button:hover {
+    transform: translate3d(0, -4.5px, 0);
+    opacity: 0.8;
+    background-color: transparent;
+    border: 2px solid black;
+    color: red;
+
+}
+
+
+.save-as .save-flex .right-img {
+    flex: 1;
+}
+
+.save-as .save-flex .right-img img {
+    height: auto;
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+/* < !--===========================our story====================--> */
+.our-story {
+    padding: 50px 0px;
+    background: floralwhite;
+}
+
+.our-story .story-flex {
+    display: flex;
+    gap: 55px;
+}
+
+.our-story .story-flex .left-img {
+    flex: 1;
+}
+
+.our-story .story-flex .left-img img {
+    height: auto;
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.our-story .story-flex .right-text {
+    flex: 1;
+}
+
+.our-story .story-flex .right-text h6 {
+    font-size: 25px;
+    font-weight: 400;
+    color: grey;
+    text-transform: uppercase;
+}
+
+.our-story .story-flex .right-text h1 {
+    padding-bottom: 19px;
+    font-size: 44px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.our-story .story-flex .right-text .p1 {
+    font-size: 22px;
+    color: grey;
+    line-height: 28px;
+    padding-bottom: 21px;
+}
+
+.our-story .story-flex .right-text .p2 {
+    font-size: 22px;
+    color: grey;
+    line-height: 28px;
+    padding-bottom: 21px;
+}
+
+.our-story .story-flex .right-text ul {
+    font-size: 22px;
+    color: #808080d9;
+    padding-bottom: 35px;
+    line-height: 40px;
+}
+
+.our-story .story-flex .right-text ul li span {
+    padding: 0px 10px;
+}
+
+
+.our-story .story-flex .right-text button {
+    height: 47px;
+    width: 180px;
+    font-size: 22px;
+    text-transform: capitalize;
+    border: 1px solid transparent;
+    background: red;
+    color: white;
+    border-radius: 5px;
+    transition: 1s all ease;
+
+}
+
+.our-story .story-flex .right-text button:hover {
+    background-color: lightslategray;
+    border: 1px solid black;
+    color: white;
+    animation: animate__wobble;
+    transform: scale(1.1);
+
+}
+
+/* ========================help=make =================== */
+.help-make {
+    background: whitesmoke;
+    padding: 55px 0px;
+}
+
+.help-make .help-flex {
+    display: flex;
+    gap: 40px;
+}
+
+.help-make .help-flex .left-help {
+    flex: 1;
+}
+
+.help-make .help-flex .left-help h6 {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 400;
+    color: grey;
+    padding-bottom: 6px;
+}
+
+.help-make .help-flex .left-help h2 {
+    font-size: 37px;
+    font-weight: 600;
+    padding-bottom: 17px;
+}
+
+.help-make .help-flex .left-help p {
+    font-size: 19px;
+    line-height: 29px;
+    color: grey;
+    padding-bottom: 22px;
+}
+
+.help-make .help-flex .left-help .list ul {
+    font-size: 24px;
+    line-height: 46px;
+    text-transform: capitalize;
+}
+
+.help-make .help-flex .left-help .list ul li span {
+    background: red;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 21px;
+    width: 30px;
+    padding: 5px 6px;
+}
+
+.help-make .help-flex .right-lion {
+    flex: 1;
+}
+
+.help-make .help-flex .right-lion img {
+    height: auto;
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+/* ========================acred================== */
+.acred {
+    background-image: url(..//images/bg3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 140px 0px;
+    /* object-fit: cover; */
+    position: relative;
+    z-index: 111111;
+}
+
+.acred::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.692);
+    z-index: -1;
+}
+
+.acred .acres-flex {
+    display: flex;
+}
+
+/* .acred .acres-flex .acresss {
+} */
+
+.acred .acres-flex .acresss .forest-box {
+    text-align: center;
+}
+
+.acred .acres-flex .acresss .forest-box h2 {
+    font-size: 60px;
+    color: white;
+    font-weight: 800;
+}
+
+.acred .acres-flex .acresss .forest-box h6 {
+    font-size: 22px;
+    color: #fdd340;
+    text-transform: capitalize;
+    padding-bottom: 16px;
+}
+
+.acred .acres-flex .acresss .forest-box p {
+    font-size: 22px;
+    color: #fff;
+}
+
+/* ====================recent-blog================== */
+.recent-blog {
+    background-color: whitesmoke;
+    padding: 100px 0px;
+}
+
+.recent-blog .posts {
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.recent-blog .posts p {
+    font-size: 22px;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    color: grey;
+}
+
+.recent-blog .posts h5 {
+    font-size: 45px;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+
+.recent-blog .layout-flex {
+    display: flex;
+    gap: 35px;
+}
+
+/* .recent-blog .layout-flex .hello {} */
+
+.recent-blog .layout-flex .hello .world1 .img3 {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    height: 283px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+
+
+.recent-blog .layout-flex .hello .world1 .img3 img {
+    max-width: 100%;
+    min-height: 100%;
+    border-radius: 16px;
+    padding-bottom: 20px;
+    transition: 3s all ease;
+}
+
+.recent-blog .layout-flex .hello .world1 .img3 img:hover {
+    transform: scale(1.4);
+}
+
+
+.recent-blog .layout-flex .hello .world1 h6 {
+    font-size: 20px;
+    text-transform: capitalize;
+    color: grey;
+    padding-bottom: 10px;
+
+}
+
+.recent-blog .layout-flex .hello .world1 h6 span {
+    color: red;
+    cursor: pointer;
+}
+
+.recent-blog .layout-flex .hello .world1 h3 {
+    font-size: 25px;
+    text-transform: capitalize;
+    padding-bottom: 25px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.recent-blog .layout-flex .hello .world1 h3:hover {
+    color: red;
+}
+
+
+.recent-blog .layout-flex .hello .world1 .btn3 {
+    margin-top: 31px;
+    height: 50px;
+    width: 185px;
+    font-size: 25px;
+    text-transform: capitalize;
+    line-height: -28px;
+    border-radius: 10px;
+    background: red;
+    color: white;
+    border: transparent;
+    transition: 1s all ease;
+    cursor: pointer;
+
+}
+
+.recent-blog .layout-flex .hello .world1 button {
+    height: 50px;
+    width: 185px;
+    font-size: 25px;
+    text-transform: capitalize;
+    line-height: -28px;
+    border-radius: 10px;
+    background: red;
+    color: white;
+    border: transparent;
+    transition: 1s all ease;
+    cursor: pointer;
+}
+
+.recent-blog .layout-flex .hello .world1 button:hover {
+    transform: translate3d(0, -8px, 0);
+    opacity: 0.6;
+}
+
+/* ============================ testiminial ======================= */
+
+.testiminial {
+    background-color: #f5deb300;
+    padding: 40px 0px;
+}
+
+.testiminial .review {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.testiminial .review p {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: grey;
+}
+
+.testiminial .review h5 {
+    font-size: 40px;
+    text-transform: capitalize;
+}
+
+.testiminial .lorem-flex {
+    display: flex;
+    gap: 35px;
+
+}
+
+/* 
+.testiminial .lorem-flex .pellen {
+
+} */
+
+.testiminial .lorem-flex .pellen .tesque {
+    background: white;
+    border: 1px solid grey;
+    padding: 22px;
+    position: relative;
+    border-radius: 12px;
+    z-index: 111111;
+}
+
+.testiminial .lorem-flex .pellen .tesque::after {
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border: 1px solid grey;
+    border-top: none;
+    border-left: none;
+
+    transform: rotate(45deg);
+    top: 166px;
+    background-color: white;
+    bottom: -3px;
+    left: 25px;
+    right: 0;
+    z-index: 11111;
+
+
+}
+
+
+.testiminial .lorem-flex .pellen .tesque h3 {
+    font-size: 25px;
+    /* padding-left: 9px; */
+    padding-bottom: 15px;
+    position: relative;
+    padding-left: 27px;
+    position: relative;
+
+    &::before {
+        content: "\201c";
+        position: absolute;
+        color: red;
+        font-size: 55px;
+        top: -18px;
+        left: -3px;
+        bottom: 0;
+        font-family: serif;
+    }
+
+    &::after {
+        content: "\201d";
+        position: absolute;
+        color: black;
+        font-size: 30px;
+        bottom: -8px;
+        right: 166px;
+        bottom: 12px;
+        font-family: serif;
+    }
+}
+
+/* .testiminial .lorem-flex .pellen .tesque h3 span {
+    color: red;
+} */
+
+
+.testiminial .lorem-flex .pellen .tesque h3 .p6 {
+    text-transform: capitalize;
+    color: black;
+}
+
+
+
+.testiminial .lorem-flex .pellen .tesque p {
+    font-size: 20px;
+    color: grey;
+}
+
+
+.testiminial .jonson {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    padding-top: 18px;
+}
+
+
+/* .testiminial .jonson .willain {} */
+
+.testiminial .jonson .willain img {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    outline: 2px solid white;
+    outline-offset: -2px;
+    object-fit: cover;
+}
+
+
+/* .testiminial .jonson .jon-text {} */
+
+.testiminial .jonson .jon-text h5 {
+    font-size: 22px;
+    text-transform: capitalize;
+}
+
+.testiminial .jonson .jon-text h6 {
+    font-size: 18px;
+    text-transform: capitalize;
+    color: gray;
+    font-weight: 500;
+}
+
+/* ===================== footer ===================== */
+.last-section {
+    background-color: black;
+    color: white;
+}
+
+.last-section .justo-flex {
+    display: grid;
+    grid-template-columns: 2fr 1frr;
+    grid-template-columns: 2fr 1fr;
+    padding: 38px;
+    gap: 600px;
+
+}
+
+.last-section .justo-flex .names {}
+
+
+.last-section .justo-flex .names h4 {
+    font-size: 30px;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+}
+
+.last-section .justo-flex .names h4 span {
+    color: red;
+}
+
+.last-section .justo-flex .names p {
+    /* color: red; */
+    font-size: 20px;
+    line-height: 34px;
+    padding-bottom: 30px;
+    color: grey;
+}
+
+.last-section .justo-flex .names .icons .icon ul {
+    display: flex;
+    gap: 15px;
+}
+
+.last-section .justo-flex .names .icons .icon ul li {
+    background: transparent;
+    border: 2px solid grey;
+    width: 45px;
+    height: 45px;
+    line-height: 43px;
+    font-size: 18px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.last-section .justo-flex .names .icons .icon ul li:hover {
+    background-color: red;
+
+}
+
+.last-section .justo-flex .names .icons .icon ul li a span {
+    color: white;
+}
+
+.last-section .justo-flex .names .icons .icon ul li:hover a span {
+    color: black;
+}
+
+.last-section .justo-flex .insta h1 {
+    text-transform: capitalize;
+    font-size: 35px;
+}
+
+
+.last-section .create {
+    padding: 30px;
+}
+
+.last-section .create .allright {
+    text-align: center;
+}
+
+
+.last-section .create .allright p {
+    font-size: 25px;
+    color: grey;
+}
+
+
+.last-section .create .allright p span {
+    color: white;
+    font-weight: bold;
+}

@@ -1,0 +1,48 @@
+@media(min-width:768px) {
+
+    /* ====================== header ===================== */
+
+    .container {
+        margin-right: 55px;
+        margin-left: 55px;
+    }
+
+    /* ====================== header ===================== */
+
+    .header .wild .logo h1 {
+        font-size: 33px;
+    }
+
+    .header .wild .them {
+        font-size: 22px;
+    }
+
+    .header .wild .them .bar {
+        height: 36px;
+        width: 40px;
+        height: 36px;
+        width: 40px;
+    }
+
+
+    /* ========================= heros ============================== */
+
+    .heros {
+        padding: 161px 10px;
+    }
+
+
+
+    .heros .protect {
+        width: 95%;
+    }
+
+    .heros .protect h1 {
+        font-size: 44px;
+    }
+
+    .heros .protect p {
+        font-size: 18px;
+    }
+
+}
