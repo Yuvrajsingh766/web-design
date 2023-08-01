@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Subtotal Price Calculator</title>
+</head>
+
+<body>
+    <h1>Subtotal Price Calculator</h1>
+
+    <div>
+        <label for="unitPrice">Unit Price:</label>
+        <input type="number" id="unitPrice" min="0" step="0.01" value="10.00">
+    </div>
+
+    <div>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" min="1" value="1">
+    </div>
+
+    <div>
+        <label for="subtotal">Subtotal:</label>
+        <span id="subtotal">10.00</span>
+    </div>
+
+    <script>
+        // Function to calculate subtotal
+        function calculateSubtotal() {
+            const unitPrice = parseFloat(document.getElementById("unitPrice").value);
+            const quantity = parseInt(document.getElementById("quantity").value);
+            const subtotal = unitPrice * quantity;
+            document.getElementById("subtotal").innerText = subtotal.toFixed(2);
+        }
+
+        // Event listeners to recalculate subtotal when input values change
+        document.getElementById("unitPrice").addEventListener("input", calculateSubtotal);
+        document.getElementById("quantity").addEventListener("input", calculateSubtotal);
+
+        // Calculate and display the initial subtotal
+        calculateSubtotal();
+    </script>
+</body>
+
+</html>

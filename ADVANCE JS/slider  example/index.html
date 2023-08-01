@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Slider Example</title>
+    <!-- Link to the Slick CSS -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+
+    <style>
+        .slider img {
+            height: 550px;
+            width: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Your slider content goes here -->
+    <div class="slider">
+        <div><img src="image/IMG1.jpg" alt="Image 1"></div>
+        <div><img src="image/IMG2.jpg" alt="Image 2"></div>
+        <div><img src="image/IMG3.jpg" alt="Image 3"></div>
+        <!-- Add more slides as needed -->
+    </div>
+
+    <!-- Link to the Slick JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <!-- Initialize the Slick slider -->
+    <script>
+        $(document).ready(function () {
+            $('.slider').slick({
+                dots: true, // Show dots for navigation
+                arrows: true, // Show navigation arrows
+                infinite: true, // Loop the slider
+                speed: 500, // Transition speed (milliseconds)
+                slidesToShow: 1, // Number of slides to show at a time
+                slidesToScroll: 1 // Number of slides to scroll at a time
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Two Numbers</title>
+</head>
+
+<body>
+
+    <!-- Input fields for two numbers -->
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+
+    <!-- Button to trigger the addition -->
+    <button onclick="addNumbers()">Add</button>
+
+    <!-- Result container to display the sum -->
+    <p id="result"></p>
+
+    <!-- JavaScript code -->
+    <script>
+        // Replaced Function with Arrow Function
+        const ask = (question, yes, no) => {
+            if (confirm(question)) {
+                yes();
+            } else {
+                no();
+            }
+        };
+
+        ask(
+            "Do you agree?",
+            () => {
+                alert("You agreed.");
+            },
+            () => {
+                alert("You canceled the execution.");
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>
